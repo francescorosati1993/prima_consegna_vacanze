@@ -107,6 +107,7 @@ public class ContactRepository
 			query = query.replace("[tableName]", tableName);
 		
 			con.executeDML(query);
+			
 	}
 	
 	private void saveMultiple(List<Contact> contacts, boolean update) throws SQLException

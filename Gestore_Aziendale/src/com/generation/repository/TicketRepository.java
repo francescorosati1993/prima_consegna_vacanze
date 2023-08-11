@@ -19,12 +19,12 @@ public class TicketRepository
 	static
 	{
 		String insert = "Insert into [tableName] (id, contact_id, request, response, sentOn, closedOn)" +
-						"values ([id], [contact_id], [request], [response], [sentOn], [closedOn])";
+						"values ([id], [contact_id], [request], [response], [senton], [closedon])";
 	
 		commands.put("insert", insert);
 		
-		String update = "UPDATE [tableName] set contact_id=[contact_id], request=[request],response=[response], "+
-				 		"sentOn=[sentOn], closedOn= [closedOn] WHERE id=[id]";
+		String update = "UPDATE [tableName] set contact_id=[contact_id], request=[request], response=[response], "+
+				 		"sentOn=[sentOn], closedOn=[closedOn] WHERE id=[id]";
 
 		commands.put("update", update);
 		
@@ -115,6 +115,23 @@ public class TicketRepository
 			query = query.replace("[tableName]", tableName);
 		
 			con.executeDML(query);
+	}
+	
+	public String stampaQuery (Ticket ticket, boolean update) throws SQLException
+	{
+		String query;
+		Map<String, String> converted = objectToMap(ticket);
+		if(update)
+			query = commands.get("update");
+		else
+			query = commands.get("insert");
+		
+		for(String key : converted.keySet())
+			query = query.replace("[" + key + "]", apicizza(converted.get(key)));
+		
+		query = query.replace("[tableName]", tableName);
+		
+		return query;
 	}
 	
 	private void saveMultiple(List<Ticket> tickets, boolean update) throws SQLException

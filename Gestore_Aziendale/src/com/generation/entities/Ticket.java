@@ -90,16 +90,15 @@ public class Ticket
 		return closedOn;
 	}
 	
-	public void setClosedOn(LocalDateTime closendOn) 
+	public void setClosedOn(LocalDateTime closedOn) 
 	{
-		this.closedOn = closendOn;
+		this.closedOn = closedOn;
 	}
 
 	
 	public String toString() 
 	{
-		return "{id:'" + id +   "', request:'" + request +"', contact_id:'"+ contact_id + "', contact:'" + contact.getName() + " " +
-				contact.getSurname() + "', response:'" + response + "', sentOn:'" + sentOn + "', closendOn:'" + closedOn + "'}";
+		return "{id:'" + id + "', request:'" + request +"', contact_id:'"+ contact_id + "', response:'" + response + "', sentOn:'" + sentOn + "', closedOn:'" + closedOn + "'}";
 	}
 	
 	

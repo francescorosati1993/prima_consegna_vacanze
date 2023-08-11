@@ -252,5 +252,10 @@ public class Database
 		repoCompany.updateList(companies);
 	}
 	
+	public String stampaQuery(Ticket ticket) throws SQLException
+	{
+		return repoTicket.stampaQuery(ticket, true);
+	}
+	
 	
 }
