@@ -71,12 +71,11 @@ public class TicketAperti {
 		
 		
 		for(Contact contact : contacts) 
-		{
 			if(contact.getCompany_id() == company.getId())
 				for(Ticket ticket : tickets)
 					if(ticket.getContact_id() == contact.getId() && ticket.getClosedOn()==null)
 						Console.print(ticket.toString());
-		}
+		
 		
 	}
 
