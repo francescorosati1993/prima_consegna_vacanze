@@ -1,0 +1,3 @@
+username=root
+password=Generation.95
+dbname=gestoreaziendale
