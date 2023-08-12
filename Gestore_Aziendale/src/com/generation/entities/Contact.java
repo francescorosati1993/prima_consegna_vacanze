@@ -116,7 +116,7 @@ public class Contact
 	@Override
 	public String toString() 
 	{
-		return "{id:'" + id + "', company_id:'" + company_id + "', name:'" + name
+		return "{id:'" + id + "', company_id:'" + company_id + "', company:'" + company.getName() + "', name:'" + name
 				+ "', surname:'" + surname + "', address:'" + address + "', city:'" + city + "', tickets:'" + tickets
 				+ "'}";
 	}

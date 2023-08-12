@@ -97,8 +97,8 @@ public class Database
 	public List<Ticket> findAllTickets() throws SQLException
 	{
 		List<Ticket> tickets = repoTicket.findAll();
-//		for(Ticket ticket : tickets)
-//			linkTicketToContact(ticket);
+		for(Ticket ticket : tickets)
+			linkTicketToContact(ticket);
 		
 		return tickets;
 	}

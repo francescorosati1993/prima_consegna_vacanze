@@ -41,7 +41,6 @@ public class InserimentoContattiDaCSV {
 			Console.print("File non trovato, inserire nome file corretto e riprovare");
 		}
 		
-		
 		while(reader.hasNextLine()) 
 		{
 			Contact contact = new Contact();
@@ -58,7 +57,8 @@ public class InserimentoContattiDaCSV {
 		
 			db.insertContact(contact);
 		}
-	
+		
+		
 	}
 
 }

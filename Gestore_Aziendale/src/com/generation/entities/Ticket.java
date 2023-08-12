@@ -98,7 +98,7 @@ public class Ticket
 	
 	public String toString() 
 	{
-		return "{id:'" + id + "', request:'" + request +"', contact_id:'"+ contact_id + "', response:'" + response + "', sentOn:'" + sentOn + "', closedOn:'" + closedOn + "'}";
+		return "{id:'" + id + "', request:'" + request +"', contact_id:'"+ contact_id + "', contact:'" + contact.getName() + " " + contact.getSurname() + "', response:'" + response + "', sentOn:'" + sentOn + "', closedOn:'" + closedOn + "'}";
 	}
 	
 	
