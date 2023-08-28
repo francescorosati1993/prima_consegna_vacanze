@@ -46,7 +46,7 @@ public class InserimentoContattiDaCSV {
 			Contact contact = new Contact();
 			
 			String contactCSV = reader.nextLine();
-			String[] column = contactCSV.split(";");
+			String[] column = contactCSV.split(",");
 		
 			contact.setId(Integer.parseInt(column[0]));
 			contact.setCompany_id(Integer.parseInt(column[1]));
